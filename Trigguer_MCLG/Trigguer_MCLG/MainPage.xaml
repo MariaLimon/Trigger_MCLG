@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Trigguer_MCLG.MainPage">
+    <StackLayout Margin="10">
+        <Entry Placeholder="enter name">
+            <Entry.Triggers>
+                <Trigger TargetType="Entry"
+                 Property="IsFocused" Value="True">
+                    <Setter Property="BackgroundColor" Value="red" />
+                    <Setter Property="TextColor" Value="White"/>
+                </Trigger>
+            </Entry.Triggers>
+        </Entry>
+
+        <CheckBox>
+            <CheckBox.Triggers>
+                <Trigger TargetType="CheckBox"
+                 Property="IsChecked"
+                 Value="True">
+                    <Setter Property="Color" Value="Green"/>
+                </Trigger>
+            </CheckBox.Triggers>
+        </CheckBox>
+        <CheckBox>
+            <CheckBox.Triggers>
+                <Trigger TargetType="CheckBox"
+                 Property="IsChecked"
+                 Value="True">
+                    <Setter Property="Color" Value="Yellow"/>
+                </Trigger>
+            </CheckBox.Triggers>
+        </CheckBox>
+
+        <Button BackgroundColor="gray"
+                Text="boton"
+                CornerRadius="20">
+            <Button.Triggers>
+                <Trigger TargetType="Button"
+                 Property="IsPressed"
+                 Value="True">
+                    <Setter Property="BackgroundColor" Value="Green"/>
+                    <Setter Property="TextColor" Value="White"/>
+                </Trigger>
+            </Button.Triggers>
+        </Button>
+
+        <Editor FontAttributes="Bold"
+                FontSize="Title"
+                AutoSize="TextChanges">
+            <Editor.Triggers>
+                <Trigger TargetType="Editor"
+                         Property="IsFocused"
+                         Value="true">
+                    <Setter Property="FontAttributes" Value="italic"/>
+                    <Setter Property="FontSize" Value="Body"/>
+                </Trigger>
+            </Editor.Triggers>
+        </Editor>
+
+        <RadioButton Content="oooooo">
+            <RadioButton.Triggers>
+                <Trigger TargetType="RadioButton"
+                         Property="IsChecked"
+                         Value="true">
+                    <Setter Property="Content" Value="Seleccionado"/>
+
+                </Trigger>
+            </RadioButton.Triggers>
+        </RadioButton>
+        <RadioButton Content="oooooo">
+            <RadioButton.Triggers>
+                <Trigger TargetType="RadioButton"
+                         Property="IsChecked"
+                         Value="true">
+                    <Setter Property="Content" Value="Seleccionado"/>
+
+                </Trigger>
+            </RadioButton.Triggers>
+        </RadioButton>
+    </StackLayout>
+    
+
+</ContentPage>
